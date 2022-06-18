@@ -3,7 +3,7 @@ import { UserDispContext, GetBackendServlet, GetDateFormatMMDDYYYY, createPhotoL
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTurnUp, faCheck, faFolder, faFile } from "@fortawesome/free-solid-svg-icons";
 
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { Directory, Photo } from "../CrossServerTypes/DataTypes";
 import { Container, Row, Col, Stack, Form, Button, Alert, Dropdown, DropdownButton } from "react-bootstrap";
 
@@ -23,6 +23,7 @@ const AlbumViewer = () => {
     const {modalInfo, setModalInfo} = useContext(ModalContext);
 
     const graphClient = useApolloClient();
+    const navigate = useNavigate();
     
     useEffect(() => {
         
@@ -38,6 +39,21 @@ const AlbumViewer = () => {
         graphClient.query({query: AlbumInfoFromAlbumCode, variables: {
             code: servedAlbumCode
         }}).then((res) => {
+            if(!res.data.AlbumInfoFromAlbumCode){
+                setModalInfo!({
+                    ...modalInfo!,
+                    modalSize: "sm",
+                    modalShown: true,
+                    modalHeader: "Error",
+                    canClose: true,
+                    modalContent:
+                    <Fragment>
+                        <p>Album does not exist</p>
+                    </Fragment>
+                });
+                navigate("/");
+                return;
+            }
             setAlbumName(res.data.AlbumInfoFromAlbumCode.name);
         });
 
