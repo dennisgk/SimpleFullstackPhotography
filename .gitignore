@@ -1,0 +1,4 @@
+sfp_backend/dist
+sfp_backend/node_modules
+sfp_frontend/node_modules
+sfp_frontend/build
