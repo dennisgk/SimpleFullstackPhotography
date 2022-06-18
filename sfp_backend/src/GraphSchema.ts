@@ -33,7 +33,7 @@ const resolverFunctions = {
     Date: DateScalar
 }
 
-const cbp_schema_no_resolvers = new GraphQLSchema({query: RootQuery, mutation: RootMutation});
-const cbp_schema = addResolversToSchema(cbp_schema_no_resolvers, resolverFunctions);
+const sfp_schema_no_resolvers = new GraphQLSchema({query: RootQuery, mutation: RootMutation});
+const sfp_schema = addResolversToSchema(sfp_schema_no_resolvers, resolverFunctions);
 
-export {cbp_schema};
+export {sfp_schema};

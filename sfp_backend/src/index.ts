@@ -1,7 +1,7 @@
 import express from 'express';
 import graphql from 'graphql';
 import { graphqlHTTP } from 'express-graphql';
-import { cbp_schema } from './CBPGraphSchema';
+import { sfp_schema } from './GraphSchema';
 import { QueryDatabase } from './DatabaseConnector';
 import { HandleGetPhoto, HandleGetServerInfo, HandleUploadPhoto } from './PhotoAccess/PhotoRetrieve';
 import cors from 'cors';
@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use('/graph', graphqlHTTP({
-	schema:cbp_schema,
-	graphiql:true
+	schema:sfp_schema,
+	graphiql:false
 }));
 
 app.get('/photo', HandleGetPhoto);

@@ -5,7 +5,7 @@ const pool = mariadb.createPool({
     user:"root",
     password:"",
     connectionLimit:10,
-    database:"cbp_database"
+    database:"sfp_database"
 });
 
 const QueryDatabase = (queryString: string, queryArgs: any) => {
