@@ -23,3 +23,10 @@ files in the sfp_images directory which the backend can access.
 
 ### Step by step setup guide
 
+1. Install the prerequisites:
+
+```bash
+
+
+
+```
