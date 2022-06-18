@@ -68,7 +68,7 @@ mysql -u root
 CREATE DATABASE sfp_database;
 ```
 
-    2. Copy contents from sfp_database.sql
+2. Copy contents from sfp_database.sql
 
 ```bash
 mysql -u root sfp_database < sfp_database.sql
