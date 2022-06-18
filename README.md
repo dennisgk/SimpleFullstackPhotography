@@ -101,3 +101,9 @@ INSERT INTO admin_accounts(username, password) VALUES('ADMIN_USERNAME_HERE', 'AD
 ```bash
 npm start
 ```
+
+11. If you want to edit the favicon, logo, or main page images, they are located in these places:
+    1. favicon.ico: /sfp_frontend/public
+    2. logo.png: /sfp_frontend/public/assets
+    3. carousel images ([1-8].jpg): /sfp_frontend/public/assets/carousel
+    4. main page iamges([9-20].jpg): /sfp_frontend/public/assets/carousel
