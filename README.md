@@ -106,4 +106,10 @@ npm start
     1. favicon.ico: /sfp_frontend/public
     2. logo.png: /sfp_frontend/public/assets
     3. carousel images ([1-8].jpg): /sfp_frontend/public/assets/carousel
-    4. main page iamges([9-20].jpg): /sfp_frontend/public/assets/carousel
+    4. main page images([9-20].jpg): /sfp_frontend/public/assets/carousel
+
+12. If you ever access the website other than from localhost, make sure you update /sfp_frontend/src/.env
+    1. You must specify the backend protocol (http or https)
+    2. You must specify the backend host (ex. localhost, 192.168.1.50, example.com)
+    3. You must specify the backend port (it will always be 8000 unless you change it in the backend)
+    4. If these things are not configured properly, the frontend will not be able to contact the backend and the website will not work
