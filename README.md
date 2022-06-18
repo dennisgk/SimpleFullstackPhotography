@@ -83,7 +83,18 @@ mysql -u root sfp_database < sfp_database.sql
     3. Edit /sfp_frontend/src/Components/FloatingNavbar.tsx
     4. Change the **SF Photography** in the NavbarBrand.Link component in the return function of the react component to whatever you would like
 
-9. Start both the backend and frontend
+9. Add an admin account
+
+```bash
+mysql -u root
+```
+
+```sql
+USE sfp_database;
+INSERT INTO admin_accounts(username, password) VALUES('ADMIN_USERNAME_HERE', 'ADMIN_PASSWORD_HERE');
+```
+
+10. Start both the backend and frontend
     1. Navigate to /sfp_backend/ and run 
     2. Navigate to /sfp_frontend/ and run
 
