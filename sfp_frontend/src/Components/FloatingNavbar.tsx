@@ -36,7 +36,7 @@ const FloatingNavbar = () => {
             <Stack direction="vertical" className="m-0" gap={0}>
                 <Container className="d-inline-flex my-1">
 
-                    <Navbar.Brand><Link to='/' style={{textDecoration:'none'}}><span className="text-accent">CBurns Photography</span></Link></Navbar.Brand>
+                    <Navbar.Brand><Link to='/' style={{textDecoration:'none'}}><span className="text-accent">SF Photography</span></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     
                     <Navbar.Collapse id="basic-navbar-nav">
