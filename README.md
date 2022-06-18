@@ -59,6 +59,7 @@ FLUSH PRIVILEGES;
 
 6. Copy the database
     1. Create the sfp_database in mariadb
+    2. Copy contents from sfp_database.sql
 
 ```bash
 mysql -u root
@@ -67,8 +68,6 @@ mysql -u root
 ```sql
 CREATE DATABASE sfp_database;
 ```
-
-2. Copy contents from sfp_database.sql
 
 ```bash
 mysql -u root sfp_database < sfp_database.sql
@@ -86,11 +85,6 @@ mysql -u root sfp_database < sfp_database.sql
 
 9. Start both the backend and frontend
     1. Navigate to /sfp_backend/ and run 
-
-```bash
-npm start
-```
-
     2. Navigate to /sfp_frontend/ and run
 
 ```bash
