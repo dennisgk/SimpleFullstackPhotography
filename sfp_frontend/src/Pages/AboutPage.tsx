@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import { Container } from "react-bootstrap/lib/Tab";
+import { Container } from "react-bootstrap";
 import { getNavbarHeight, NavbarContext } from "../Contexts/NavbarContext";
 import { UserDispContext } from "../Contexts/UserDisplayContext";
 
